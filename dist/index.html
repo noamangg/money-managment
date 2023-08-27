@@ -11,26 +11,31 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="">
+  
 
-  <div class="container  mx-auto my-8  grid gap-4 lg:grid-cols-3 ">
-    <div class=" grid gap-4 left bg-white px-4 py-8 shadow-md rounded">
-      <h2 class="flex gap-2 items-center border-b border-b-black-600"><i class="fa-solid fa-kiwi-bird"></i><span>Last
-          Recordes</span></h2>
-      <div>
-        <!-- Last records here, just 4 record is enough -->
-      </div>
+  <div class="container mx-auto my-8  grid gap-4 lg:grid-cols-3 ">
+    <div class=" self-start grid gap-4 left bg-white px-4 py-8 shadow-md rounded">
+      <!-- <h2 class="flex gap-2 items-center border-b border-b-black-600"><i class="fa-solid fa-kiwi-bird"></i><span>Last
+          Recordes</span></h2> -->
 
-      <div class="new-task">
+      <div class="new-task grid ">
         <h2 class="flex gap-2 items-center border-b border-b-black-600"><i class="fa-solid fa-plus"></i><span>Add New
             Recode</span></h2>
-        <input type="text" class="w-full border mt-4 p-2 text-lg">
+
+        <input id="record-inp" type="text" class="input-filed w-full border mt-4 p-2 text-lg outline-none" placeholder="Enter Hours">
+        <select id="select-ob" class="p-2 my-2 outline-none">
+          <option value="0">Select Project:</option>
+          <option value="coding">Coding</option>
+          <option value="iqtibasy">Iqtibasy</option>
+        </select>
+        <button id="add-btn" class="btn" onclick="onclickBtn()">Add Record</button>
       </div>
 
 
     </div>
     <div class="right  lg:col-span-2 grid gap-4 md:grid-cols-2">
-      
+
     </div>
 
   </div>

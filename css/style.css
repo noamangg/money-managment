@@ -13,7 +13,7 @@ body {
 
 
 .deatils-box {
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,3 +73,23 @@ body {
   --box-color: #614BC3;
 }
 
+.input-filed::placeholder {
+  font-size: 1rem;
+  font-weight: lighter;
+
+}
+select {
+
+}
+.btn {
+  padding: .5rem 1rem;
+  background-color: var(--box-color);
+  color: white;
+  border-radius: .25rem;
+  box-shadow:  0 2px 2px rgba(0, 0, 0, 0.164);
+  transition: .3s;
+}
+.btn:hover {
+  color: #333;
+  background-color: white;
+}
