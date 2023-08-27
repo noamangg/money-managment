@@ -2,6 +2,9 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+} 
+html {
+  --box-color: rgb(250, 61, 61)
 }
 
 body {
@@ -9,5 +12,64 @@ body {
 }
 
 
+.deatils-box {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: .25rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transform: scale(.9);
+  cursor: grab;
+}
+.deatils-box:hover {
+  transform: scale(1);
+  transition: .25s;
+  color: #333;
+  background-color: #fff;
 
+}
+
+.deatils-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--box-color);
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: -1;
+  
+}
+.deatils-box:hover::before {
+  width: 2px;
+}
+
+.deatils-box:hover > span i {
+  transform: rotate(360deg);
+  transition: .5s;
+}
+.deatils-box h3 {
+  font-size: 1rem;
+
+}
+.deatils-box > span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.deatils-box:is(:nth-child(3), :nth-child(4)) {
+  --box-color: #FFC436;
+}
+
+.deatils-box:nth-of-type(2) {
+  --box-color: #F24C3D;
+}
+.deatils-box:is(:nth-of-type(5), :nth-child(6)) {
+  --box-color: #614BC3;
+}
 
